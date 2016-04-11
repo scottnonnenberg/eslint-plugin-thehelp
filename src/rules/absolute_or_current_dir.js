@@ -2,7 +2,9 @@ var dotDot = /\.\./;
 var relative = /^\.\//;
 var twoSlashes = /\/.+\//;
 
-function checkPath(context, node, path, type) {
+function checkPath(context, node, type) {
+  var path = node.value;
+
   if (dotDot.test(path)) {
     context.report(node, 'Found .. in ' + type + ' dependency path: "' + path + '"');
   }
@@ -23,12 +25,11 @@ module.exports = function(context) {
         }
 
         var target = node.arguments[0];
-        var value = target.value;
-        checkPath(context, node, value, 'require()');
+        checkPath(context, target, 'require()');
       }
     },
     ImportDeclaration: function(node) {
-      checkPath(context, node, node.source.value, 'import');
+      checkPath(context, node.source, 'import');
     }
   };
 };
