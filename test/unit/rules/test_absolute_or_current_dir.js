@@ -59,4 +59,33 @@ ruleTester.run('absolute-or-current-dir with import statements', rule, {
     }],
   }],
 });
+
+ruleTester.run('absolute-or-current-dir with configuration', rule, {
+  valid: [{
+    code: 'import "../util/setupPaths";',
+    options: [{
+      exceptions: [/setupPaths$/],
+    }],
+  }, {
+    code: 'import "../util/setupPaths";',
+    options: [{
+      exceptions: ['../util/setupPaths'],
+    }],
+  }],
+  invalid: [{
+    code: 'import "../util/setupPaths";',
+    errors: [{
+      message:
+        'Found .. in import dependency path: "../util/setupPaths"',
+    }],
+  }, {
+    code: 'import "../util/setupPaths";',
+    options: [{
+      exceptions: ['../util/somethingElse'],
+    }],
+    errors: [{
+      message:
+        'Found .. in import dependency path: "../util/setupPaths"',
+    }],
+  }],
 });
