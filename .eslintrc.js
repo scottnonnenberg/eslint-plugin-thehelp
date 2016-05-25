@@ -1,19 +1,19 @@
-module.exports = {
-  "env": {
-    "commonjs": true,
-    "node": true,
-    "mocha": true
-  },
+'use strict';
 
-  "extends": [
-    "eslint:recommended",
+module.exports = {
+  extends: [
+    'thehelp/core',
   ],
 
-  "rules": {
-    "indent": [2, 2, {"SwitchCase": 1}],
-    "linebreak-style": [2, "unix"],
-    "quotes": [2, "single"],
-    "semi": [2, "always"],
-    "no-console": [0]
-  }
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: [__dirname],
+      },
+    },
+  },
+
+  rules: {
+    'security/detect-object-injection': 'off',
+  },
 };
