@@ -58,3 +58,13 @@ module.exports = function(context) {
     },
   };
 };
+
+module.exports.schema = [{
+  type: 'object',
+  properties: {
+    exceptions: {
+      type: 'array',
+    },
+  },
+  additionalProperties: false,
+}];
