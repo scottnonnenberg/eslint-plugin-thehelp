@@ -2,7 +2,7 @@
 
 var RuleTester = require('eslint').RuleTester;
 
-var rule = require('../../../src/rules/absolute_or_current_dir');
+var rule = require('src/rules/absolute_or_current_dir');
 
 
 var ruleTester = new RuleTester({
