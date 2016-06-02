@@ -1,5 +1,6 @@
 ## Next
 
+* New rule: `no-mutation`
 * Add history of changes
 * Add readme and detailed rule documentation
 

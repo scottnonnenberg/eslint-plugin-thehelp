@@ -23,4 +23,5 @@ And that's it! Details for each rule below.
 
 ## Configuration:
 
-[`absolute-or-current-dir`](doc/absolute_or_current_dir.md) - all `require()` or `import` calls must either refer to absolute paths or the current directory ('./peer'). Goodbye `../../../`!
+[`thehelp/absolute-or-current-dir`](doc/absolute_or_current_dir.md) - all `require()` or `import` calls must either refer to absolute paths or the current directory ('./peer'). Goodbye `../../../`!
+[`thehelp/no-mutation`](doc/no_mutation.md) - prevents mutation of object values, pushing you to a more functional style. `exceptions` configuration allows CommonJS compatibility.
