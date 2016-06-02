@@ -6,6 +6,7 @@
 
   "devDependencies": {
     "app-module-path": "1.1.0",
+    "chai": "3.5.0",
     "eslint-config-thehelp": "0.3.2",
     "istanbul": "0.4.3",
     "mocha": "2.5.3"
