@@ -1,3 +1,7 @@
+## 0.3.1 (2016-06-02)
+
+# Export `no-array-mutation` rule via index (added tests to help catch this in the future)
+
 ## 0.3.0 (2016-06-02)
 
 * New rule: `no-mutation` - taken from https://github.com/jhusain/eslint-plugin-immutable/pull/15
