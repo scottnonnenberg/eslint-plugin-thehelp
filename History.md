@@ -1,6 +1,7 @@
 ## Next
 
-* New rule: `no-mutation`
+* New rule: `no-mutation` - taken from https://github.com/jhusain/eslint-plugin-immutable/pull/15
+* New rule: `no-array-mutation` - taken from https://github.com/jhusain/eslint-plugin-immutable/pull/5/files
 * Add history of changes
 * Add readme and detailed rule documentation
 
