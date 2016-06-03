@@ -42,6 +42,13 @@ ruleTester.run('no-mutation', rule, {
           property: 'exports',
         }],
       }],
+    }, {
+      code: 'function save(x) { this.x = x; }',
+      options: [{
+        exceptions: [{
+          object: 'this',
+        }],
+      }],
     },
   ],
   invalid: [{

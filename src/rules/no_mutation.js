@@ -24,12 +24,20 @@ function compare(object, property, exception) {
   return false;
 }
 
+function getObject(node) {
+  if (node.object.type === 'ThisExpression') {
+    return 'this';
+  }
+
+  return node.object.name;
+}
+
 function checkExceptions(node, exceptions) {
   if (!exceptions || !exceptions.length) {
     return false;
   }
 
-  var object = node.left.object.name;
+  var object = getObject(node.left);
   var property = node.left.property.name;
 
   for (var i = 0, length = exceptions.length; i < length; i += 1) {
