@@ -1,3 +1,7 @@
+## 0.3.2 (2016-06-03)
+
+# `no-mutation` now allows `{ object: 'this' }` exceptions
+
 ## 0.3.1 (2016-06-02)
 
 # Export `no-array-mutation` rule via index (added tests to help catch this in the future)
