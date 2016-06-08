@@ -7,7 +7,7 @@ arr.sort(compareFn); # invalid
 arr.splice(1, 2); # invalid
 ```
 
-Any code of the form `obj.call()` will be inspected, and the name of the method will be matched against this list of methods:
+Any code of the form `obj.call()` will be inspected, and the name of the method will be matched against this list of methods, taken from [MDN's Array documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array):
 
   - `copyWithin`
   - `fill`
