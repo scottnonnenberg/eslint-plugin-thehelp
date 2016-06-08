@@ -1,6 +1,6 @@
 # Rule: `thehelp/no-array-mutation`
 
-Arrays in javascript are hugely useful. However, it's all to easy to modify them. Some array methods mutate even if you might not expect them to:
+Arrays in javascript are hugely useful. However, it's all too easy to modify them. Some array methods mutate even if you might not expect them to:
 
 ```javascript
 arr.sort(compareFn); # invalid
