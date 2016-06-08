@@ -1,23 +1,25 @@
-# eslint-plugin-thehelp
+# @scottnonnenberg/eslint-plugin-thehelp
 
 A collection of rules with no other good place.
 
 ## Install
 
 ```bash
-npm install eslint-plugin-thehelp --save-dev
+npm install @scottnonnenberg/eslint-plugin-thehelp --save-dev
 ```
 
 In your [`eslint`](http://eslint.org/) configuration:
 
 ```json
 {
-  "plugins": ["thehelp"],
+  "plugins": ["@scottnonnenberg/thehelp"],
   "rules": {
     "thehelp/absolute-or-current-dir": "error",
   },
 }
 ```
+
+_Note: rules DO NOT include the @scottnonnenberg prefix, even though you might think they should._
 
 And that's it! Details for each rule below.
 

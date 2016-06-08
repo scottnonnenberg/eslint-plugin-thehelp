@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-thehelp",
+  "name": "@scottnonnenberg/eslint-plugin-thehelp",
   "version": "0.3.2",
   "description": "A set of rules for me!",
   "main": "src/index.js",
