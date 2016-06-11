@@ -34,6 +34,21 @@
       "maxSubjectLength": 72
     }
   },
-  "author": "Scott Nonnenberg",
-  "license": "all rights reserved"
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "absolute",
+    "require",
+    "import",
+    "no-mutation",
+    "no-array-mutation",
+    "functional"
+  ],
+  "author": "Scott Nonnenberg <scott@nonnenberg.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/scottnonnenberg/eslint-plugin-thehelp",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:scottnonnenberg/eslint-plugin-thehelp.git"
+  }
 }
