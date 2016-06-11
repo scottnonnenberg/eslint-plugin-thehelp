@@ -3,32 +3,35 @@
   "version": "0.3.2",
   "description": "A set of rules for me!",
   "main": "src/index.js",
-
   "devDependencies": {
     "@scottnonnenberg/eslint-config-thehelp": "0.5.0",
     "app-module-path": "1.1.0",
     "chai": "3.5.0",
+    "ghooks": "1.2.3",
     "istanbul": "0.4.3",
-    "mocha": "2.5.3"
+    "mocha": "2.5.3",
+    "validate-commit-msg": "2.6.1"
   },
-
   "scripts": {
     "test": "npm run lint && npm run unit",
-
     "clean": "rm -rf coverage/*",
     "lint": "time eslint .",
-
     "mocha": "NODE_ENV=test time mocha --recursive --require test/setup.js",
     "mocha-watch": "npm run mocha -- --watch",
     "mocha-coverage": "NODE_ENV=test time istanbul cover _mocha -- --recursive --require test/setup.js",
-
     "unit": "npm run mocha -- -s 15 test/unit",
     "unit-watch": "npm run mocha-watch -- -s 15 test/unit",
     "unit-coverage": "npm run mocha-coverage -- test/unit",
-
     "open-coverage": "open coverage/lcov-report/index.html"
   },
-
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    },
+    "validate-commit-msg": {
+      "maxSubjectLength": 72
+    }
+  },
   "author": "Scott Nonnenberg",
   "license": "all rights reserved"
 }
