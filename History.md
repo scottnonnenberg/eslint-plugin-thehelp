@@ -1,6 +1,7 @@
 ## 0.3.2 (2016-06-03)
 
 * `no-mutation` now allows `{ object: 'this' }` exceptions
+* Add `@scottnonnenberg` scoping to project name
 
 ## 0.3.1 (2016-06-02)
 
