@@ -3,16 +3,6 @@
   "version": "0.3.2",
   "description": "A set of rules for me!",
   "main": "src/index.js",
-  "devDependencies": {
-    "@scottnonnenberg/eslint-config-thehelp": "0.5.0",
-    "app-module-path": "1.1.0",
-    "chai": "3.5.0",
-    "ghooks": "1.2.3",
-    "istanbul": "0.4.3",
-    "mocha": "2.5.3",
-    "standard-version": "2.3.0",
-    "validate-commit-msg": "2.6.1"
-  },
   "scripts": {
     "release": "standard-version",
     "test": "npm run lint && npm run unit",
@@ -25,6 +15,16 @@
     "unit-watch": "npm run mocha-watch -- -s 15 test/unit",
     "unit-coverage": "npm run mocha-coverage -- test/unit",
     "open-coverage": "open coverage/lcov-report/index.html"
+  },
+  "devDependencies": {
+    "@scottnonnenberg/eslint-config-thehelp": "0.5.0",
+    "app-module-path": "1.1.0",
+    "chai": "3.5.0",
+    "ghooks": "1.2.3",
+    "istanbul": "0.4.3",
+    "mocha": "2.5.3",
+    "standard-version": "2.3.0",
+    "validate-commit-msg": "2.6.1"
   },
   "config": {
     "ghooks": {
