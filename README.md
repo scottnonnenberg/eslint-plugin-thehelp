@@ -2,6 +2,8 @@
 
 A collection of rules with no other good place.
 
+Blog post announcing this project: https://blog.scottnonnenberg.com/eslint-part-2-contribution/
+
 ## Install
 
 ```bash
