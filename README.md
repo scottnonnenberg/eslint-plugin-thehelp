@@ -31,6 +31,12 @@ And that's it! Details for each rule below.
 - [`thehelp/no-mutation`](doc/no_mutation.md) - prevents mutation of object values, pushing you to a more functional style. `exceptions` configuration allows CommonJS compatibility.
 - [`thehelp/no-array-mutation`](doc/no_array_mutation.md) - looks for object calls (`obj.call()`) with function names taken from the list of mutating array methods.
 
+## Contributing
+
+This project uses [`standard-version`](https://github.com/conventional-changelog/standard-version) to release new versions, automatically updating the version number and [changelog](https://github.com/scottnonnenberg/eslint-plugin-thehelp/blob/master/CHANGELOG.md) based on commit messages in [standard format](https://github.com/bcoe/conventional-changelog-standard/blob/master/convention.md). [`ghooks`](https://github.com/gtramontina/ghooks) and [`validate-commit-msg`](https://github.com/kentcdodds/validate-commit-msg) are used to ensure all commit messages match the expected format (see [package.json](https://github.com/scottnonnenberg/eslint-plugin-thehelp/blob/master/package.json) for the configuration details).
+
+It takes some getting used to, but this configuration is absolutely worthwhile. A changelog is way easier to understand than the chaos of a raw commit stream, especially with `standard-version` providing direct links to bugs, commits and [commit ranges](https://github.com/scottnonnenberg/eslint-plugin-thehelp/compare/v0.3.2...v0.4.0).
+
 ## License
 
 (The MIT license)
