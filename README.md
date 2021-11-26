@@ -4,8 +4,6 @@ A collection of rules with no other good place.
 
 Blog post announcing this project: https://blog.scottnonnenberg.com/eslint-part-2-contribution/
 
-[![continous integration](https://img.shields.io/circleci/project/scottnonnenberg/eslint-plugin-thehelp/master.svg?maxAge=3600)](https://circleci.com/gh/scottnonnenberg/eslint-plugin-thehelp/tree/master) [![code coverage](https://img.shields.io/codecov/c/github/scottnonnenberg/eslint-plugin-thehelp/master.svg?maxAge=3600)](https://codecov.io/gh/scottnonnenberg/eslint-plugin-thehelp/branch/master) [![npm version](https://img.shields.io/npm/v/@scottnonnenberg/eslint-plugin-thehelp.svg?maxAge=3600)](https://www.npmjs.com/package/@scottnonnenberg/eslint-plugin-thehelp) [![license](https://img.shields.io/github/license/scottnonnenberg/eslint-plugin-thehelp.svg?maxAge=2592000)](https://github.com/scottnonnenberg/eslint-plugin-thehelp#license)
-
 ## Install
 
 ```bash
@@ -18,8 +16,8 @@ In your [`eslint`](http://eslint.org/) configuration:
 {
   "plugins": ["@scottnonnenberg/thehelp"],
   "rules": {
-    "@scottnonnenberg/thehelp/absolute-or-current-dir": "error",
-  },
+    "@scottnonnenberg/thehelp/absolute-or-current-dir": "error"
+  }
 }
 ```
 
