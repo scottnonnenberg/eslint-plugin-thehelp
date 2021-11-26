@@ -1,6 +1,23 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [0.5.0](https://github.com/scottnonnenberg/eslint-plugin-thehelp/compare/v0.4.0...v0.5.0) (2021-11-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* **rules:** `absolute-or-current-dir` configuration no longer takes
+regular expressions, only strings
+
+### Features
+
+* **rules:** Upgrade rules format for eslint 8.x, with full schemas ([eb8e960](https://github.com/scottnonnenberg/eslint-plugin-thehelp/commit/eb8e960b8210ec1e9fe6bbbac7ac731f20dee62e))
+
+
+### Bug Fixes
+
+* **test:** Fix rule existence test ([425b0cb](https://github.com/scottnonnenberg/eslint-plugin-thehelp/commit/425b0cbf9afecbe01c65a740033bddea4fcc43e2))
 
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/scottnonnenberg/eslint-plugin-thehelp/compare/v0.3.2...v0.4.0) (2016-06-11)
