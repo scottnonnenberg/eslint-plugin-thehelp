@@ -14,7 +14,7 @@ function checkExceptions(options, path) {
     if (exception === path) {
       return true;
     }
-    if (exception.test && exception.test(path)) {
+    if (path.endsWith(exception)) {
       return true;
     }
   }
@@ -41,30 +41,45 @@ function checkPath(context, node, type) {
   }
 }
 
-module.exports = function(context) {
-  return {
-    CallExpression: function(node) {
-      if (node.callee.name === 'require') {
-        if (!node.arguments.length) {
-          return;
-        }
+module.exports = {
+  meta: {
+    type: 'suggestion',
 
-        var target = node.arguments[0];
-        checkPath(context, target, 'require()');
-      }
+    docs: {
+      description: 'Prevents confusing and error-prone deep path traversal in your imports',
+      url: 'https://github.com/scottnonnenberg/eslint-plugin-thehelp/blob/master/doc/absolute_or_current_dir.md',
     },
-    ImportDeclaration: function(node) {
-      checkPath(context, node.source, 'import');
-    },
-  };
+
+    schema: [{
+      type: 'object',
+      properties: {
+        exceptions: {
+          type: 'array',
+          items: {
+            type: 'string',
+          },
+        },
+      },
+      additionalProperties: false,
+    }],
+  },
+
+  create: function(context) {
+    return {
+      CallExpression: function(node) {
+        if (node.callee.name === 'require') {
+          if (!node.arguments.length) {
+            return;
+          }
+
+          var target = node.arguments[0];
+          checkPath(context, target, 'require()');
+        }
+      },
+      ImportDeclaration: function(node) {
+        checkPath(context, node.source, 'import');
+      },
+    };
+  },
 };
 
-module.exports.schema = [{
-  type: 'object',
-  properties: {
-    exceptions: {
-      type: 'array',
-    },
-  },
-  additionalProperties: false,
-}];

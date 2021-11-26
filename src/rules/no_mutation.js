@@ -51,23 +51,52 @@ function checkExceptions(node, exceptions) {
   return false;
 }
 
-module.exports = checkExceptions;
+module.exports = {
+  meta: {
+    type: 'suggestion',
 
-module.exports = function(context) {
-  return {
-    AssignmentExpression: function(node) {
-      var options = context.options[0] || {};
-      var exceptions = options.exceptions || [];
-
-      if (node.left.type !== 'MemberExpression') {
-        return;
-      }
-
-      if (checkExceptions(node, exceptions)) {
-        return;
-      }
-
-      context.report(node, 'No object mutation allowed.');
+    docs: {
+      description: 'Prevents you from modifying any variable or object',
+      url: 'https://github.com/scottnonnenberg/eslint-plugin-thehelp/blob/master/doc/no_mutation.md',
     },
-  };
+
+    schema: [{
+      type: 'object',
+      properties: {
+        exceptions: {
+          type: 'array',
+          items: {
+            type: 'object',
+            properties: {
+              object: {
+                type: 'string',
+              },
+              property: {
+                type: 'string',
+              },
+            },
+          },
+        },
+      },
+    }],
+  },
+
+  create: function(context) {
+    return {
+      AssignmentExpression: function(node) {
+        var options = context.options[0] || {};
+        var exceptions = options.exceptions || [];
+
+        if (node.left.type !== 'MemberExpression') {
+          return;
+        }
+
+        if (checkExceptions(node, exceptions)) {
+          return;
+        }
+
+        context.report(node, 'No object mutation allowed.');
+      },
+    };
+  },
 };

@@ -64,12 +64,12 @@ ruleTester.run('absolute-or-current-dir with configuration', rule, {
   valid: [{
     code: 'import "../util/setupPaths";',
     options: [{
-      exceptions: [/setupPaths$/],
+      exceptions: ['../util/setupPaths'],
     }],
   }, {
     code: 'import "../util/setupPaths";',
     options: [{
-      exceptions: ['../util/setupPaths'],
+      exceptions: ['setupPaths'],
     }],
   }],
   invalid: [{

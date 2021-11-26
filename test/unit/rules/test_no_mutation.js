@@ -79,14 +79,6 @@ ruleTester.run('no-mutation', rule, {
       message: 'No object mutation allowed.',
     }],
   }, {
-    code: 'obj.x = "null exception object";',
-    options: [{
-      exceptions: [null],
-    }],
-    errors: [{
-      message: 'No object mutation allowed.',
-    }],
-  }, {
     code: 'obj.x = "non-matching exceptions";',
     options: [{
       exceptions: [{

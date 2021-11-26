@@ -1,19 +1,12 @@
 'use strict';
 
 module.exports = {
+  env: {
+    commonjs: true,
+    node: true,
+  },
+
   extends: [
-    '@scottnonnenberg/thehelp/core',
+    'eslint:recommended',
   ],
-
-  settings: {
-    'import/resolver': {
-      node: {
-        paths: [__dirname],
-      },
-    },
-  },
-
-  rules: {
-    'security/detect-object-injection': 'off',
-  },
 };

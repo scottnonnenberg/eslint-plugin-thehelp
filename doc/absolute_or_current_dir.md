@@ -3,8 +3,8 @@
 This rule is designed to prevent this confusing and error-prone pattern:
 
 ```javascript
-var app = require('../../../lib/app'); # invalid
-import app from '../../../lib/app'; # invalid
+var app = require('../../../lib/app'); // invalid
+import app from '../../../lib/app'; // invalid
 ```
 
 Instead pushing you to just two options:
@@ -20,8 +20,8 @@ import peer from './peer';
 Either dependencies come from the same directory or an absolute path is required. You can still require node modules like usual. But you can't require something from a child directory:
 
 ```javascript
-var child = require('./sub/child'); # invalid
-import child from './sub/child'; # invalid
+var child = require('./sub/child'); // invalid
+import child from './sub/child'; // invalid
 ```
 
 For both of these situations you'd be required to use an absolute path.
@@ -66,9 +66,9 @@ Now, how to set this up for your application? If you just turn this rule on, you
 ```javascript
 {
   'thehelp/absolute-or-current-dir': ['error', {
-    exceptions: [/setup_module_path$/],
+    exceptions: [/setup_module_path/],
   }]
 }
 ```
 
-`exceptions` is an array of strings (to be compared exactly) or regular expressions which will be compared against the target of the `require()` or `import`. If a match is found, no error is thrown.
+`exceptions` is an array of strings which will be compared (exactly or with `endsWith()`) against the target of the `require()` or `import`. If a match is found, no error is thrown.

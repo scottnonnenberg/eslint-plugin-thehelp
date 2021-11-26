@@ -1,5 +1,7 @@
+'use strict';
+
 module.exports = {
-  extends: [
-    '@scottnonnenberg/thehelp/test',
-  ],
+  env: {
+    mocha: true,
+  },
 };
